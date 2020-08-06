@@ -1,0 +1,27 @@
+body {
+  background-color: aliceblue;
+}
+
+h4 {
+  margin: 10px;
+  text-align: center;
+}
+
+.container {
+  padding: 30px;
+  background-color: rgb(185, 203, 238);
+}
+
+.container input {
+  width: 50px;
+}
+
+.container button {
+  padding: 0;
+  width: 100px;
+  height: 30px;
+}
+
+.memo {
+  width: 200px !important;
+}
