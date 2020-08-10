@@ -3,6 +3,7 @@ var lunchEnd = 13 * 60;
 var lunchTime = (lunchEnd - lunchStart) / 60;
 function clearNumber1() {
   document.timerForm1.reset();
+  calcSum();
 }
 function calcTime1() {
   var t1 = eval(timerForm1.hour1.value) * 60 +
@@ -15,10 +16,12 @@ function calcTime1() {
   } else {
     timerForm1.result.value = (t2 - t1) / 60.0;
   }
+  calcSum();
 }
 
 function clearNumber2() {
   document.timerForm2.reset();
+  calcSum();
 }
 function calcTime2() {
   var t1 = eval(timerForm2.hour1.value) * 60 +
@@ -31,10 +34,12 @@ function calcTime2() {
   } else {
     timerForm2.result.value = (t2 - t1) / 60.0;
   }
+  calcSum();
 }
 
 function clearNumber3() {
   document.timerForm3.reset();
+  calcSum();
 }
 function calcTime3() {
   var t1 = eval(timerForm3.hour1.value) * 60 +
@@ -47,4 +52,11 @@ function calcTime3() {
   } else {
     timerForm3.result.value = (t2 - t1) / 60.0;
   }
+  calcSum();
+}
+
+function calcSum() {
+  sumForm.sum.value = eval(timerForm1.result.value) +
+    eval(timerForm2.result.value) +
+    eval(timerForm3.result.value);
 }

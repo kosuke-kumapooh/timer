@@ -25,3 +25,11 @@ h4 {
 .memo {
   width: 200px !important;
 }
+
+.sum {
+  font-weight: bold;
+}
+
+.sum input{
+  width: 80px !important;
+}
