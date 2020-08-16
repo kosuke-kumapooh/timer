@@ -17,52 +17,70 @@
       <div class="col-sm">
         <form name="timerForm1">
           <p>開始時刻
-            <input type="text" name="hour1" value="8" onchange="calcTime1()">:
-            <input type="text" name="minute1" value="45" onchange="calcTime1()"></p>
+            <input type="text" name="hour1" value="8"
+              onfocus="this.select()" onchange="calcTime(timerForm1)">:
+            <input type="text" name="minute1" value="45"
+              onfocus="this.select()" onchange="calcTime(timerForm1)"></p>
           <p>終了時刻
-            <input type="text" name="hour2" value="17" onchange="calcTime1()">:
-            <input type="text" name="minute2" value="15" onchange="calcTime1()"></p>
+            <input type="text" name="hour2" value="17"
+              onfocus="this.select()" onchange="calcTime(timerForm1)">:
+            <input type="text" name="minute2" value="15"
+              onfocus="this.select()" onchange="calcTime(timerForm1)"></p>
           <p>
-            <button type="button" class="btn btn-primary" onclick="calcTime1()">作業時間計算</button>
+            <button type="button" class="btn btn-primary"
+              onclick="calcTime(timerForm1)">作業時間計算</button>
             <input type="text" name="result" value="0.0" readonly>
           </p>
           <p><input type="text" class="memo" placeholder="作業内容メモ"></p>
-          <p><button type="reset" class="btn btn-secondary" onclick="clearNumber1()">Reset</button></p>
+          <p><button type="reset" class="btn btn-secondary"
+            onclick="clearNumber(timerForm1)">Reset</button></p>
         </form>
       </div>
       <div class="col-sm">
         <form name="timerForm2">
           <p>開始時刻
-            <input type="text" name="hour1" value="8" onchange="calcTime2()">:
-            <input type="text" name="minute1" value="45" onchange="calcTime2()"></p>
+            <input type="text" name="hour1" value=""
+              onfocus="this.select()" onchange="calcTime(timerForm2)">:
+            <input type="text" name="minute1" value=""
+              onfocus="this.select()" onchange="calcTime(timerForm2)"></p>
           <p>終了時刻
-            <input type="text" name="hour2" value="17" onchange="calcTime2()">:
-            <input type="text" name="minute2" value="15" onchange="calcTime2()"></p>
+            <input type="text" name="hour2" value=""
+              onfocus="this.select()" onchange="calcTime(timerForm2)">:
+            <input type="text" name="minute2" value=""
+              onfocus="this.select()" onchange="calcTime(timerForm2)"></p>
           <p>
-            <button type="button" class="btn btn-primary" onclick="calcTime2()">作業時間計算</button>
+            <button type="button" class="btn btn-primary"
+              onclick="calcTime(timerForm2)">作業時間計算</button>
             <input type="text" name="result" value="0.0" readonly>
           </p>
           <p><input type="text" class="memo" placeholder="作業内容メモ"></p>
-          <p><button type="reset" class="btn btn-secondary" onclick="clearNumber2()">Reset</button></p>
+          <p><button type="reset" class="btn btn-secondary" 
+            onclick="clearNumber(timerForm2)">Reset</button></p>
         </form>
       </div>
       <div class="col-sm">
         <form name="timerForm3">
           <p>開始時刻
-            <input type="text" name="hour1" value="8" onchange="calcTime3()">:
-            <input type="text" name="minute1" value="45" onchange="calcTime3()"></p>
+            <input type="text" name="hour1" value=""
+              onfocus="this.select()" onchange="calcTime(timerForm3)">:
+            <input type="text" name="minute1" value=""
+              onfocus="this.select()" onchange="calcTime(timerForm3)"></p>
           <p>終了時刻
-            <input type="text" name="hour2" value="17" onchange="calcTime3()">:
-            <input type="text" name="minute2" value="15" onchange="calcTime3()"></p>
+            <input type="text" name="hour2" value=""
+              onfocus="this.select()" onchange="calcTime(timerForm3)">:
+            <input type="text" name="minute2" value=""
+              onfocus="this.select()" onchange="calcTime(timerForm3)"></p>
           <p>
-            <button type="button" class="btn btn-primary" onclick="calcTime3()">作業時間計算</button>
+            <button type="button" class="btn btn-primary"
+              onclick="calcTime(timerForm3)">作業時間計算</button>
             <input type="text" name="result" value="0.0" readonly>
           </p>
           <p><input type="text" class="memo" placeholder="作業内容メモ"></p>
-          <p><button type="reset" class="btn btn-secondary" onclick="clearNumber3()">Reset</button></p>
+          <p><button type="reset" class="btn btn-secondary" 
+            onclick="clearNumber(timerForm3)">Reset</button></p>
         </form>
         <form name="sumForm">
-          <p class="sum">作業時間合計
+          <p class="sum">作業時間合計(h)
             <input type="text" name="sum" value="0.0" readonly>
           </p>
         </form>
