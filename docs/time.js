@@ -1,6 +1,12 @@
-var lunchStart = 12 * 60 + 15;
-var lunchEnd = 13 * 60;
-var lunchTime = (lunchEnd - lunchStart) / 60;
+window.onload = function () {
+  setLunchTime()
+}
+
+function setLunchTime() {
+  lunchStart = eval(lunchStartHour.value) * 60 + eval(lunchStartMinute.value);
+  lunchEnd = eval(lunchEndHour.value) * 60 + eval(lunchEndMinute.value);
+  lunchTime = (lunchEnd - lunchStart) / 60;
+}
 
 function clearNumber(formnum) {
   formnum.reset();
@@ -12,9 +18,9 @@ function calcTime(formnum) {
   var t2 = NaN;
 
   if (checkInt(formnum.hour1.value) &&
-      checkInt(formnum.minute1.value) &&
-      checkInt(formnum.hour2.value) &&
-      checkInt(formnum.minute2.value)) {
+    checkInt(formnum.minute1.value) &&
+    checkInt(formnum.hour2.value) &&
+    checkInt(formnum.minute2.value)) {
     t1 = eval(formnum.hour1.value) * 60 +
       eval(formnum.minute1.value);
     t2 = eval(formnum.hour2.value) * 60 +
