@@ -22,7 +22,7 @@ h4 {
   height: 30px;
 }
 
-.memo {
+.memo input {
   width: 200px !important;
 }
 
@@ -32,5 +32,4 @@ h4 {
 
 .sum input{
   width: 80px !important;
-  font-weight: bold;
 }
