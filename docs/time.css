@@ -29,6 +29,7 @@ h4 {
 
 .container input {
   width: 50px;
+  margin-left: 4px;
 }
 
 .container button {
