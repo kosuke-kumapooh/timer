@@ -15,32 +15,106 @@
   <title>工数計算サイト</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
     integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./time.css">
   <script src="./time.js"></script>
 </head>
 
 <body>
-  <h4>昼休みを考慮して，開始/終了時刻から作業時間をhour単位で出力します</h4>
+  <!-- <h4>昼休みを考慮して，開始/終了時刻から作業時間をhour単位で出力します</h4> -->
+  <h5>休憩を考慮して，開始/終了時刻から作業時間をhour単位で出力します</h5>
   <div class="lunchTimeSet">
     <form name="lunchTime">
+      <p>前休憩設定
+        <input type="time" id="break1StartIn" value="08:15" onfocus="this.select()">~
+        <input type="time" id="break1EndIn" value="08:30" onfocus="this.select()">
+        <button type="button" class="btn btn-success" onclick="setLunchTime()">Update</button>
+      </p>
+    </form>
+    <form name="lunchTime">
       <p>昼休み設定
-        <input type="text" id="lunchStartHour" value="12" onfocus="this.select()">:
-        <input type="text" id="lunchStartMinute" value="15" onfocus="this.select()"> ~
-        <input type="text" id="lunchEndHour" value="13" onfocus="this.select()">:
-        <input type="text" id="lunchEndMinute" value="00" onfocus="this.select()">
+        <input type="time" id="lunchStartIn" value="12:15" onfocus="this.select()">~
+        <input type="time" id="lunchEndIn" value="13:00" onfocus="this.select()">
+        <button type="button" class="btn btn-success" onclick="setLunchTime()">Update</button>
+      </p>
+    </form>
+    <form name="lunchTime">
+      <p>後休憩設定
+        <input type="time" id="break2StartIn" value="17:15" onfocus="this.select()">~
+        <input type="time" id="break2EndIn" value="17:30" onfocus="this.select()">
         <button type="button" class="btn btn-success" onclick="setLunchTime()">Update</button>
       </p>
     </form>
   </div>
 
   <div class="container">
-    <div class="row">
-    </div>
+    <table>
+      <tr>
+      <td><div class="start">開始時刻</div></td>
+      <td><div class="end">終了時刻</div></td>
+      <td><div class="result">作業時間(h)</div></td>
+      <td></td>
+      <td></td>
+      </tr>
+        <tr>
+        <form name="timerForm1">
+            <td><div class="start">
+            <input type="time" name="in1" onchange="calcTime(timerForm1)">
+            </div></td>
+            <td><div class="end">
+            <input type="time" name="in2" onchange="calcTime(timerForm1)">
+            </div></td>
+            <!-- <button type="button" class="btn btn-primary" onclick="calcTime(timerForm1)">作業時間計算</button> -->
+          <td><input type="text" class="result" name="result" value="0.0" readonly></td>
+          <td><button type="reset" class="btn btn-secondary" onclick="clearNumber(timerForm1)">Reset</button></td>
+          <td><input type="text" class="memo" placeholder="作業内容メモ"></td>
+        </form>
+        </tr>
+        <tr>
+        <form name="timerForm2">
+            <td><div class="start">
+              <input type="time" name="in1" onchange="calcTime(timerForm2)">
+            </div></td>
+            <td><div class="end">
+              <input type="time" name="in2" onchange="calcTime(timerForm2)">
+            </div></td>
+          <td><input type="text" class="result" name="result" value="0.0" readonly></td>
+          <td><button type="reset" class="btn btn-secondary" onclick="clearNumber(timerForm2)">Reset</button></td>
+          <td><input type="text" class="memo" placeholder="作業内容メモ"></td>
+        </form>
+        </tr>
+        <tr>
+        <form name="timerForm3">
+            <td><div class="start">
+              <input type="time" name="in1" onchange="calcTime(timerForm3)">
+            </div></td>
+            <td><div class="end">
+              <input type="time" name="in2" onchange="calcTime(timerForm3)">
+            </div></td>
+          <td><input type="text" class="result" name="result" value="0.0" readonly></td>
+          <td><button type="reset" class="btn btn-secondary" onclick="clearNumber(timerForm3)">Reset</button></td>
+          <td><input type="text" class="memo" placeholder="作業内容メモ"></td>
+        </form>
+        </tr>
+        <tr>
+          <form name="timerForm4">
+            <td><div class="start">
+              <input type="time" name="in1" onchange="calcTime(timerForm4)">
+            </div></td>
+            <td><div class="end">
+              <input type="time" name="in2" onchange="calcTime(timerForm4)">
+            </div></td>
+            <td><input type="text" class="result" name="result" value="0.0" readonly></td>
+            <td><button type="reset" class="btn btn-secondary" onclick="clearNumber(timerForm4)">Reset</button></td>
+            <td><input type="text" class="memo" placeholder="作業内容メモ"></td>
+          </form>
+        </tr>
+        </table>
+
+        <form name="sumForm">
+          <p class="sum">作業時間合計(h)
+            <input type="text" name="sum" value="0.0" readonly>
+          </p>
+        </form>
   </div>
-
-  <script src="./form.js"></script>
 </body>
-
 </html>

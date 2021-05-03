@@ -2,24 +2,28 @@ body {
   background-color: aliceblue;
 }
 
-h4 {
+/* h4 {
+  margin: 10px;
+  text-align: center;
+} */
+
+h5 {
   margin: 10px;
   text-align: center;
 }
 
 .lunchTimeSet{
-  margin: 30px;
   text-align: center;
-  font-size: larger;
 }
 
 .lunchTimeSet input {
-  width: 40px;
+  width: 90px;
 }
 
 .lunchTimeSet button {
+  padding: 0;
   width: 100px;
-  height: 40px;
+  height: 30px;
 }
 
 .container {
@@ -28,8 +32,7 @@ h4 {
 }
 
 .container input {
-  width: 50px;
-  margin-left: 4px;
+  width: 90px;
 }
 
 .container button {
@@ -38,7 +41,21 @@ h4 {
   height: 30px;
 }
 
+.end {
+  margin-left: 20px;
+}
+
+.result {
+  margin-left: 20px;
+  width: 90px !important;
+}
+
+.btn-secondary {
+  margin-left: 20px !important;
+}
+
 .memo {
+  margin-left: 30px !important;
   width: 200px !important;
 }
 
