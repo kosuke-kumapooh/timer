@@ -25,8 +25,8 @@
   <div class="lunchTimeSet">
     <form name="lunchTime">
       <p>前休憩設定
-        <input type="time" id="break1StartIn" value="08:15" onfocus="this.select()">~
-        <input type="time" id="break1EndIn" value="08:30" onfocus="this.select()">
+        <input type="time" id="break1StartIn" value="08:30" onfocus="this.select()">~
+        <input type="time" id="break1EndIn" value="08:45" onfocus="this.select()">
         <button type="button" class="btn btn-success" onclick="setLunchTime()">Update</button>
       </p>
     </form>
@@ -103,6 +103,40 @@
             <td><div class="end">
               <input type="time" name="in2" onchange="calcTime(timerForm4)">
             </div></td>
+            <td><input type="text" class="result" name="result" value="0.0" readonly></td>
+            <td><button type="reset" class="btn btn-secondary" onclick="clearNumber(timerForm4)">Reset</button></td>
+            <td><input type="text" class="memo" placeholder="作業内容メモ"></td>
+          </form>
+        </tr>
+        <tr>
+          <form name="timerForm5">
+            <td>
+              <div class="start">
+                <input type="time" name="in1" onchange="calcTime(timerForm4)">
+              </div>
+            </td>
+            <td>
+              <div class="end">
+                <input type="time" name="in2" onchange="calcTime(timerForm4)">
+              </div>
+            </td>
+            <td><input type="text" class="result" name="result" value="0.0" readonly></td>
+            <td><button type="reset" class="btn btn-secondary" onclick="clearNumber(timerForm4)">Reset</button></td>
+            <td><input type="text" class="memo" placeholder="作業内容メモ"></td>
+          </form>
+        </tr>
+        <tr>
+          <form name="timerForm6">
+            <td>
+              <div class="start">
+                <input type="time" name="in1" onchange="calcTime(timerForm4)">
+              </div>
+            </td>
+            <td>
+              <div class="end">
+                <input type="time" name="in2" onchange="calcTime(timerForm4)">
+              </div>
+            </td>
             <td><input type="text" class="result" name="result" value="0.0" readonly></td>
             <td><button type="reset" class="btn btn-secondary" onclick="clearNumber(timerForm4)">Reset</button></td>
             <td><input type="text" class="memo" placeholder="作業内容メモ"></td>

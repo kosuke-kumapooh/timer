@@ -62,8 +62,11 @@ function calcTime(formnum) {
 }
 
 function calcSum() {
-  sumForm.sum.value = eval(timerForm1.result.value) +
+  sumForm.sum.value =
+    eval(timerForm1.result.value) +
     eval(timerForm2.result.value) +
     eval(timerForm3.result.value) +
-    eval(timerForm4.result.value);
+    eval(timerForm4.result.value) +
+    eval(timerForm5.result.value) +
+    eval(timerForm6.result.value);
 }
