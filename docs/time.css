@@ -2,11 +2,6 @@ body {
   background-color: aliceblue;
 }
 
-/* h4 {
-  margin: 10px;
-  text-align: center;
-} */
-
 h5 {
   margin: 10px;
   text-align: center;
@@ -68,4 +63,9 @@ h5 {
 .sum input{
   width: 80px !important;
   font-weight: bold;
+}
+
+.copyright {
+  text-align: right;
+  margin-right: 150px;
 }

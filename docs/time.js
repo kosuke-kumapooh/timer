@@ -68,5 +68,9 @@ function calcSum() {
     eval(timerForm3.result.value) +
     eval(timerForm4.result.value) +
     eval(timerForm5.result.value) +
-    eval(timerForm6.result.value);
+    eval(timerForm6.result.value) +
+    eval(timerForm7.result.value) +
+    eval(timerForm8.result.value) +
+    eval(timerForm9.result.value) +
+    eval(timerForm10.result.value);
 }
